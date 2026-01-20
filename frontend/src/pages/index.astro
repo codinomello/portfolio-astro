@@ -1,0 +1,16 @@
+---
+import Menu from "../components/Menu.tsx";
+const res = await fetch("http://localhost:8080/health");
+const health = await res.text();
+
+---
+
+<main class="bg-black text-green-400 font-mono min-h-screen p-6">
+  <pre class="text-magenta-500">
+    WELCOME TO THE BBS
+    SYSTEM ONLINE
+  </pre>
+  <p class="text-green-500">API STATUS: {health}</p>
+
+  <Menu client:load />
+</main>
