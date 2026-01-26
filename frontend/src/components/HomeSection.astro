@@ -1,0 +1,89 @@
+---
+import Name from './code/Name.astro';
+import ComputerArt from './code/BBS.astro';
+import TypingText from './react/TypingText.tsx';
+---
+
+<section id="home" class="border-4 border-double border-green-400 p-8 mb-6 bg-linear-to-br from-green-900/20 via-black/70 to-cyan-900/20 backdrop-blur-sm shadow-2xl shadow-green-400/20">
+  <div class="text-center mb-8">
+    <Name />
+    <div class="flex justify-center mb-6">
+      <ComputerArt />
+    </div>
+  </div>
+  
+  <div class="space-y-6">
+    <div class="text-center">
+      <p class="text-2xl md:text-3xl font-bold mb-4">
+        <TypingText 
+          client:load
+          text="▓▒░ BEM-VINDO AO MAINFRAME ░▒▓" 
+          speed={40}
+          className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-green-400 to-yellow-400"
+        />
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="border-2 border-cyan-400 p-5 bg-linear-to-br from-cyan-900/20 to-black/50 shadow-lg shadow-cyan-400/20">
+        <p class="text-cyan-400 font-bold mb-3 text-lg flex items-center gap-2">
+          <span class="text-2xl">⚡</span> INFORMAÇÕES DO SISTEMA
+        </p>
+        <div class="text-green-400 space-y-2">
+          <p class="flex items-center gap-2">
+            <span class="text-yellow-400">├─</span> 
+            <span class="text-cyan-400">USUÁRIO:</span> 
+            <span class="text-yellow-400 font-bold">CODINOMELLO</span>
+          </p>
+          <p class="flex items-center gap-2">
+            <span class="text-yellow-400">├─</span>
+            <span class="text-cyan-400">FUNÇÃO:</span> 
+            <span class="text-fuchsia-400 font-bold">DESENVOLVEDOR FULL-STACK</span>
+          </p>
+          <p class="flex items-center gap-2">
+            <span class="text-yellow-400">├─</span>
+            <span class="text-cyan-400">LOCALIZAÇÃO:</span> 
+            <span class="text-green-400 font-bold">BRASIL 🇧🇷</span>
+          </p>
+          <p class="flex items-center gap-2">
+            <span class="text-yellow-400">└─</span>
+            <span class="text-cyan-400">STATUS:</span> 
+            <span class="text-green-400 font-bold animate-pulse flex items-center gap-1">
+              <span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span>
+              ONLINE
+            </span>
+          </p>
+        </div>
+      </div>
+      
+      <div class="border-2 border-yellow-400 p-5 bg-linear-to-br from-yellow-900/20 to-black/50 shadow-lg shadow-yellow-400/20">
+        <p class="text-yellow-400 font-bold mb-3 text-lg flex items-center gap-2">
+          <span class="text-2xl">🎯</span> MISSÃO ATUAL
+        </p>
+        <div class="text-yellow-400 space-y-2">
+          <p class="flex items-center gap-2">
+            <span class="text-green-400">▶</span>
+            Construindo experiências digitais incríveis
+          </p>
+          <p class="flex items-center gap-2">
+            <span class="text-green-400">▶</span>
+            Uma linha de código por vez
+          </p>
+          <p class="flex items-center gap-2">
+            <span class="text-green-400">▶</span>
+            Transformando café em software
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="border-4 border-double border-fuchsia-400 p-5 bg-linear-to-r from-fuchsia-900/20 via-purple-900/20 to-cyan-900/20 shadow-lg shadow-fuchsia-400/20">
+      <pre class="text-center text-fuchsia-400 text-sm md:text-base leading-tight">
+╔═══════════════════════════════════════════════════════════════╗
+║  "O CÓDIGO É POESIA, O DEBUG É A REVISÃO"                     ║
+║  "PROGRAMAR É CRIAR MUNDOS COM PALAVRAS LÓGICAS"              ║
+╚═══════════════════════════════════════════════════════════════╝
+      </pre>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+---
+import SkillBar from './react/SkillBar';
+
+const skills = [
+  { name: 'React', level: 90, color: 'bg-cyan-400', icon: '⚛️' },
+  { name: 'TypeScript', level: 85, color: 'bg-blue-400', icon: '📘' },
+  { name: 'Node.js', level: 80, color: 'bg-green-400', icon: '🟢' },
+  { name: 'Python', level: 75, color: 'bg-yellow-400', icon: '🐍' },
+  { name: 'Docker', level: 70, color: 'bg-purple-400', icon: '🐳' },
+  { name: 'SQL', level: 80, color: 'bg-red-400', icon: '🗄️' },
+];
+
+const techStack = [
+  { name: 'JavaScript', color: 'border-yellow-400 text-yellow-400', icon: 'JS' },
+  { name: 'React', color: 'border-cyan-400 text-cyan-400', icon: '⚛️' },
+  { name: 'Next.js', color: 'border-white text-white', icon: '▲' },
+  { name: 'Astro', color: 'border-purple-400 text-purple-400', icon: '🚀' },
+  { name: 'Tailwind', color: 'border-cyan-300 text-cyan-300', icon: '🎨' },
+  { name: 'Node.js', color: 'border-green-400 text-green-400', icon: '🟢' },
+  { name: 'Express', color: 'border-gray-400 text-gray-400', icon: '⚡' },
+  { name: 'MongoDB', color: 'border-green-500 text-green-500', icon: '🍃' },
+  { name: 'PostgreSQL', color: 'border-blue-400 text-blue-400', icon: '🐘' },
+  { name: 'Git', color: 'border-orange-400 text-orange-400', icon: '📚' },
+  { name: 'Docker', color: 'border-blue-500 text-blue-500', icon: '🐳' },
+  { name: 'AWS', color: 'border-yellow-500 text-yellow-500', icon: '☁️' },
+];
+---
+
+<section id="skills" class="border-4 border-double border-fuchsia-400 p-8 mb-6 bg-linear-to-br from-fuchsia-900/20 via-black/70 to-purple-900/20 backdrop-blur-sm shadow-2xl shadow-fuchsia-400/20">
+  <div class="flex items-center gap-3 mb-6">
+    <span class="text-4xl">🛠️</span>
+    <h2 class="text-3xl text-fuchsia-400 font-bold border-b-4 border-fuchsia-400 pb-2 flex-1">
+      ╔═══ HABILIDADES.DAT ═══╗
+    </h2>
+  </div>
+  
+  <div class="mb-8">
+    {skills.map(skill => (
+      <SkillBar client:visible {...skill} />
+    ))}
+  </div>
+  
+  <div class="border-4 border-double border-cyan-400 p-6 bg-linear-to-br from-cyan-900/30 to-blue-900/30 shadow-lg shadow-cyan-400/20">
+    <p class="text-cyan-400 font-bold mb-5 text-2xl flex items-center gap-2">
+      <span>🎯</span> TECH STACK
+    </p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      {techStack.map(tech => (
+        <div class={`border-2 ${tech.color} px-4 py-3 text-sm font-bold hover:bg-white/10 transition-all shadow-md hover:shadow-lg hover:scale-105 flex items-center justify-center gap-2`}>
+          <span>{tech.icon}</span>
+          <span>{tech.name}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

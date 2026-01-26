@@ -1,16 +1,20 @@
 ---
-import Menu from "../components/Menu.tsx";
-const res = await fetch("http://localhost:8080/health");
-const health = await res.text();
-
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/react/Nav.tsx';
+import HomeSection from '../components/HomeSection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import SkillsSection from '../components/SkillsSection.astro';
+import ProjectsSection from '../components/ProjectsSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<main class="bg-black text-green-400 font-mono min-h-screen p-6">
-  <pre class="text-magenta-500">
-    WELCOME TO THE BBS
-    SYSTEM ONLINE
-  </pre>
-  <p class="text-green-500">API STATUS: {health}</p>
-
-  <Menu client:load />
-</main>
+<Layout title="Codinomello - Full-Stack Developer">
+  <Nav client:load />
+  <HomeSection />
+  <AboutSection />
+  <SkillsSection />
+  <ProjectsSection />
+  <ContactSection />
+  <Footer />
+</Layout>
